@@ -1,3 +1,4 @@
+#Ejercicio 4-Perez Zavaleta Ramiro
 from collections import Counter
 
 vocales=["a","e","i","o","u"]
