@@ -1,4 +1,4 @@
-#Ejercicio 2 Perez Zavaleta Ramiro
+#Ejercicio 2-Perez Zavaleta Ramiro
 print("Ingre los valores para calcular el area del triangulo\n")
 x=0
 triangulo=[]
