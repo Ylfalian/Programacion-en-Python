@@ -1,4 +1,4 @@
-#Ejercicio 2 Perez Zavaleta Ramiro
+#Ejercicio 3-Perez Zavaleta Ramiro
 multiplos=[]
 tres=3
 cont=1
