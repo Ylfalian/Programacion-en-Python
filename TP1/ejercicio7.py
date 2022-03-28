@@ -1,3 +1,4 @@
+#Ejercicio 7-Perez Zavaleta Ramiro
 #input de datos 
 datos_user=[]
 i=0#las letras sueltas son utilizadas como variables contadoras para el for o while
