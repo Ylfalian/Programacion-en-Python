@@ -1,4 +1,4 @@
-#Autor:Perez Zavaleta Ramiro
+#Ejercicio 4-Perez Zavaleta Ramiro
 print("Ingrese los valores a dividir\n")
 valores=[]
 i=0
