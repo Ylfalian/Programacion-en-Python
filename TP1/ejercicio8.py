@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Ejercicio 8-Perez Zavaleta Ramiro
+=======
+#Ejercicio 4-Perez Zavaleta Ramiro
+>>>>>>> 64272d994577cdbf698c21272303f72df0d28b21
 from collections import Counter
 
 datos_user=[]# Datos del usuario
@@ -31,6 +35,7 @@ while z<=1:
         print("nombre invalido")
         break
 
+<<<<<<< HEAD
 if datos_user[2]<1000 or datos_user>9999:
     print("Fecha de nacimiento invalida.")
 
@@ -42,3 +47,6 @@ for h in range(0,4):
     if suma2>=1:
         print("goddd")
         break
+=======
+print(f"Hola {dato_use[0]} {dato_use[1]}")
+>>>>>>> 64272d994577cdbf698c21272303f72df0d28b21

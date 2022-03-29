@@ -1,3 +1,4 @@
+#Ejercicio 5-Perez Zavaleta Ramiro
 from itertools import count
 
 print("Ingrese los numeros a comaparar:\n")
