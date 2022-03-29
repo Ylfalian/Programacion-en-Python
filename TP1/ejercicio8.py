@@ -1,54 +1,44 @@
+#Ejercicio 8-Perez Zavaleta Ramiro
 from collections import Counter
 
-vocales=["a","e","i","o","u"]
-letra="a"
-sig_eps=["~","`","!","@","#","$","%","^","&","*","(",")","-","_","=","+","[","]","{","}",";",":",",","<",".",">","/","?","|"]
-dato_use=[]
-voca=vocales[0]
-suma=0#variable usada para contar en el while secundario
-suma2=0#usado en contraseña
-compa=0#usado en la seccion de la contraseña
-f=0#contador en seccion contraseña
-i=0
-t=0
-x=0
-z=0
-vocal_cont=0
-print("Ingrese su nombre, luego su apellido, fecha de nacimiento y una contraseña\n")
+datos_user=[]# Datos del usuario
+suma=0#verificacion contador result
+suma2=0
+i=0# contador del primer while
+z=0#contador del segundo while
+x=0#contador del tercer while
+h=0#contador for
+simbolos=["!","@","#"]
+verif_sim=0
+print("Ingrese su nombre, apellido, año de nacimiento y una contraseña\n")
 
-for i in range(0,5):
-    dato_use.append(input())
-    while x<=2:
-        Counter=Counter(dato_use[x])
-        while vocal_cont<=3:
-            Counter[letra]=suma
-            vocal_cont=vocal_cont+suma
-            t=t+1
-            if t>5 and vocal_cont<3:
-                break
-        if t>5 and vocal_cont<3:
-            break
-    if t>5 and vocal_cont<3:
-        print("El nombre y el apellido deben contener un minimo de 3 vocales")
+while i<4:
+    datos_user.append(input())
+    i=i+1
+
+while z<=1:
+    Counter=Counter(datos_user[z])
+    a=Counter["a"]
+    e=Counter["e"]
+    i=Counter["i"]
+    o=Counter["o"]
+    u=Counter["u"]
+    suma=a+e+i+o+u
+    z=z+1
+    if suma>=3:
         break
-    if i==2:#año de nacimiento
-        dato_use.append(int(input()))
-        if dato_use<1900 or dato_use>2022:
-            print("La fecha de nacimiento tiene que tene que ser valida")
-            break
-    if i==3:#contraseña
-        dato_use.append(input())
-        Counter=Counter(dato_use[3])
-        while compa<1:
-            Counter[sig_eps[f]]=suma2
-            compa=compa+suma2
-            f=f+1
-            if f>30 and compa<1:
-                break
-        if f>30 and compa<1:
-            break
-    if f>30 and compa<1:
-        print("Tiene que incluir un caracter especial en la contraseña")
+    elif e>4 and suma<3:
+        print("nombre invalido")
         break
 
-print(f"Hola {dato_use[0]} {dato_use[1]}")
+if datos_user[2]<1000 or datos_user>9999:
+    print("Fecha de nacimiento invalida.")
+
+for h in range(0,4):
+    Counter= Counter(datos_user[3])
+    verif_sim=Counter[simbolos[h]]
+    suma2=suma2+verif_sim
+    h=h+1
+    if suma2>=1:
+        print("goddd")
+        break
