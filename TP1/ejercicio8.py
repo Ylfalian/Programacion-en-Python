@@ -1,23 +1,19 @@
-<<<<<<< HEAD
 #Ejercicio 8-Perez Zavaleta Ramiro
-=======
-#Ejercicio 4-Perez Zavaleta Ramiro
->>>>>>> 64272d994577cdbf698c21272303f72df0d28b21
 from collections import Counter
 
 datos_user=[]# Datos del usuario
 suma=0#verificacion contador result
-suma2=0
 i=0# contador del primer while
 z=0#contador del segundo while
-x=0#contador del tercer while
-h=0#contador for
-simbolos=["!","@","#"]
-verif_sim=0
+chek=0
+
 print("Ingrese su nombre, apellido, año de nacimiento y una contraseña\n")
 
 while i<4:
-    datos_user.append(input())
+    if i!=2:
+        datos_user.append(input())
+    else:
+        datos_user.append(int(input()))
     i=i+1
 
 while z<=1:
@@ -30,23 +26,21 @@ while z<=1:
     suma=a+e+i+o+u
     z=z+1
     if suma>=3:
+        chek=chek+1
         break
-    elif e>4 and suma<3:
+    elif suma<3:
         print("nombre invalido")
         break
 
-<<<<<<< HEAD
-if datos_user[2]<1000 or datos_user>9999:
+if datos_user[2]<1000 or datos_user[2]>9999:
     print("Fecha de nacimiento invalida.")
+else:
+    chek=chek+1
 
-for h in range(0,4):
-    Counter= Counter(datos_user[3])
-    verif_sim=Counter[simbolos[h]]
-    suma2=suma2+verif_sim
-    h=h+1
-    if suma2>=1:
-        print("goddd")
-        break
-=======
-print(f"Hola {dato_use[0]} {dato_use[1]}")
->>>>>>> 64272d994577cdbf698c21272303f72df0d28b21
+if str.isalnum(datos_user[3]) is True:
+    print("la contraseña tiene que tener caracteres especiales")
+else:
+    chek=chek+1
+
+if chek==3:
+        print(f"\nbienvenido {datos_user[0]} {datos_user[1]} ")
