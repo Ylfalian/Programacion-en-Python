@@ -2,20 +2,20 @@
 from suma import sumar
 
 i=1
-z=1
+z=0
 digitos= []
-confi="y"
 menor=None
 mayor=None
 while i != 0:
-    digitos.append(int(input("\nIngrese un numero----> ")))
-    z+1
-    if z/2:
-        confi=input("\nIngrese una 'Y' para continuar y una 'N' para terminar------> ")
-        confi.lower
-    if confi=="n":
-        i=0
-    for numero in digitos:
+    digitos.append(input("\nIngrese un numero (ingrese exit para salir) ----> "))
+    compar = digitos[z]
+    z= z + 1
+    if compar == "exit":
+        z= z - 1
+        digitos.pop(z)
+        i= 0
+    int_digi = [int(c) for c in digitos]
+    for numero in int_digi:
         if menor==None and mayor==None:
             menor = numero
             mayor = numero
@@ -25,11 +25,9 @@ while i != 0:
             if numero>mayor:
                 mayor=numero
 
-
-
 print (f"el numero mayor es {mayor}")
 print (f"el numero menor es {menor}")
-print (f"La suma de todos los numeros es {sumar(digitos)}")
+print (f"La suma de todos los numeros es {sumar(int_digi)}")
 
 
 
