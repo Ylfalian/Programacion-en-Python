@@ -10,9 +10,9 @@ i = 1
 while i != 0 :
     #Condicion de salida
     if vic == 3:
-        break
+        i= 0
     elif vic_pc == 3:
-        break
+        i= 0
     
     #Entrada del jugador
     player = input("Selecciona entre piedra, papel o tijera: ")
