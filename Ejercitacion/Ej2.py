@@ -8,13 +8,11 @@ confi = "y"
 lista = []
 
 while c!=0:
-    lista.append(input("\nIngrese alguna palabra o nombre =====> "))
-    f= f + 1
-    if f >= 2:
-        confi = input("\nIngrese una 'Y' si desea continuar, caso contrario ingrese 'N' para salir ------> ")
-        confi.lower
-    if confi == "n":
-        c=0
+    lista.append(input("\nIngrese alguna palabra o nombre (Ingrese 'EXIT' para terminar) =====> "))
+    if lista[f] == "EXIT":
+        lista.pop(f)
+        c = 0
+    f = f + 1
 
 orden_lista= sorted(lista)
 
